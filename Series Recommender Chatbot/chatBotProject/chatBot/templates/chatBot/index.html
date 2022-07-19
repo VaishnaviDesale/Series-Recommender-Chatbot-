@@ -29,8 +29,8 @@
 		var textarea = document.querySelector("#results");
 		textarea.scrollTop = textarea.scrollHeight;
 
-		const socket = new WebSocket('ws://localhost:8000/ws/livec/');
-		//const socket = new WebSocket('wss://404d-103-66-83-106.in.ngrok.io/ws/livec/');
+		//const socket = new WebSocket('ws://localhost:8000/ws/livec/');
+		const socket = new WebSocket('wss://series-recommender-chatbot.herokuapp.com/ws/livec/');
 
 		socket.onmessage = (e) => {
 			result = JSON.parse(e.data).result;
